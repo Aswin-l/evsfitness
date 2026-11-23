@@ -1,0 +1,2 @@
+import { MessageCircle } from "lucide-react";
+export default function FloatingWhatsApp(){return <a className="whatsapp-float" href="https://wa.me/916369730824?text=Hi%20EVS%20Fitness%20Studio%2C%20I%27d%20like%20to%20know%20about%20membership." target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp"><MessageCircle size={21}/><span>Chat with us</span></a>}

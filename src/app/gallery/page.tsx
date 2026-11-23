@@ -1,0 +1,7 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+export const metadata:Metadata={title:"Studio Gallery"};
+const photos=[["gym-floor.jpg","The training floor","SPACE / 01"],["trainer.jpg","Show up and work","PEOPLE / 02"],["strength-training.jpg","Strength in focus","TRAINING / 03"],["community.jpg","A community in motion","COMMUNITY / 04"],["dumbbells.jpg","Tools for progress","EQUIPMENT / 05"],["group-training.jpg","Train together","MOVEMENT / 06"]];
+export default function Gallery(){return <><section className="page-hero"><p className="eyebrow">EVS / INSIDE THE STUDIO</p><h1>Real work.<br/><em>Real energy.</em></h1><p>A glimpse of the people, equipment and atmosphere at EVS Fitness Studio.</p></section><section className="gallery-grid section-pad">{photos.map(([src,title,tag],i)=><figure className={`gallery-item gallery-${i+1}`} key={src}><div className="gallery-image"><Image src={`/images/${src}`} alt={title} fill sizes="(max-width: 700px) 100vw, 50vw"/></div><figcaption><span>{tag}</span><strong>{title}</strong></figcaption></figure>)}</section><section className="gallery-bottom"><p>Want to experience the space in person?</p><Link className="button button-acid" href="/contact">Arrange a visit <ArrowUpRight size={18}/></Link></section></>}
